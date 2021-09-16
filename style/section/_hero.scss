@@ -1,0 +1,146 @@
+.hero {
+    padding: 200px 0 101px;
+    background: url(./../img/hero-bg.jpg) center/cover no-repeat;
+    position: relative;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 85px;
+        flex-wrap: wrap;
+        @include a (laptop) {
+            justify-content: center;
+        }
+    }
+
+    &__text {
+        max-width: 463px;
+        color: #2F2F2F;
+    }
+
+    &__title {
+        font-size: toRem(58);
+        font-weight: 800;
+        line-height: 130%;
+        margin-bottom: 20px;
+        @include a (laptop){
+            font-size: 40px;
+        }
+    }
+
+    &__subtitle {
+        font-size: toRem(20);
+        line-height: 140%;
+        max-width: 360px;
+        margin-bottom: 31px;
+    }
+
+    &__image {
+        width: 455px;
+        height: 455px;
+        border: 50px solid $main-color;
+        border-radius: 50%;
+        position: relative;
+        @include a (laptop) {
+            transform: scale(0.8);
+        }
+        @include a (tablet-xl) {
+            display: none;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        left: -100px;
+        top: -100px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 119px;
+
+        @include a (tablet) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        max-width: 240px;
+        height: 42px;
+        padding-left: 60px;
+        position: relative;
+        color: $light-color;
+
+        @include a (tablet-xl) {
+            max-width: 40%;
+            width: 100%;
+        }
+
+
+
+        &-1::before {
+            content: "";
+            position: absolute;
+            background: url(./../../img/hero-item-1.png);
+            width: 29px;
+            height: 39px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &-2::before {
+            content: "";
+            position: absolute;
+            background: url(./../../img/hero-item-2.png);
+            width: 29px;
+            height: 39px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &-3::before {
+            content: "";
+            position: absolute;
+            background: url(./../../img/hero-item-3.png);
+            width: 29px;
+            height: 39px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &-4::before {
+            content: "";
+            position: absolute;
+            background: url(./../../img/hero-item-4.png);
+            width: 29px;
+            height: 39px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__title-bot {
+        font-size: toRem(20);
+        font-weight: 500;
+        color: $light-color;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    &__subtitle-bot {
+        font-size: toRem(36);
+        max-width: 800px;
+        line-height: 44px;
+        text-align: center;
+        color: $light-color;
+        margin: 0 auto;
+    }
+
+}

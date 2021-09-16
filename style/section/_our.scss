@@ -1,0 +1,105 @@
+.our {
+    padding: 100px 0;
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        @include a (tablet-xl) {
+            justify-content: center;
+        }
+    }
+
+    &__items {
+
+        @include a (tablet-xl) {
+            order: 2;
+            
+        }
+    }
+
+    &__item {
+        max-width: 346px;
+        width: 100%;
+        background-color: $light-color;
+        padding: 30px;
+        margin-bottom: 48px;
+        position: relative;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:nth-child(2) {
+            margin-left: 40px;
+        }
+        &-title {
+            font-size: toRem(19);
+            font-weight: 700;
+            color: $dark-color;
+            margin-bottom: 9px;
+        }
+
+        &-descr {
+            font-size: toRem(16);
+            line-height: 130%;
+            color: #AAAAAA;
+        }
+    }
+
+    &__content {
+        max-width: 635px;
+        transform: translateY(15%);
+        @include a (tablet-xl) {
+            transform: translateY(0);
+        }
+    }
+
+    &__span {
+        font-size: toRem(20);
+        font-weight: 500;
+        color: #6D6D6D;
+        // margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: toRem(36);
+        line-height: 44px;
+        font-weight: 800;
+        margin: 10px 0 29px;
+        &-span {
+            color: $main-color;
+        }
+    }
+
+    &__descr {
+        font-size: toRem(18);
+        line-height: 140%;
+        margin-bottom: 29px;
+    }
+
+    &__items2 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item2 {
+        max-width: 160px;
+        width: 100%;
+    }
+
+    &__span {
+        &-title {
+            font-size: toRem(24);
+            font-weight: 700;
+            color: $main-color;
+            // margin-bottom: 100px;
+        }
+
+        &-descr {
+            font-size: toRem(18);
+            line-height: 140%;
+            color: #858585;
+        }
+    }
+
+}

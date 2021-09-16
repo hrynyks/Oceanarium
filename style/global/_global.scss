@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+
+    @include a (laptop) {
+        font-size: 18px;
+    }
+
+    @include a (tablet) {
+        font-size: 16px;
+    }
+
+    @include a (mobile) {
+        font-size: 14px;
+    }
+
+}
+
+body {
+    background: url(./../img/footer-bg-2.png) no-repeat bottom,
+        url(./../img/footer-bg-1.png) no-repeat bottom,
+        #E5E5E5;
+}
+
+@function toRem($value) {
+    $remValue: ($value / 20) + rem;
+    @return $remValue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container {
+    max-width: 1081px;
+    margin: 0 auto;
+    @include a (laptop) {
+        max-width: 95%;
+    }
+}
+
+.button {
+    background-color: $main-color;
+    color: $light-color;
+    border-radius: 131px;
+    padding: 15px 48px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

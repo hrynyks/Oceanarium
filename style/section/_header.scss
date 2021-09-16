@@ -1,0 +1,54 @@
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 20px;
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__navigation {
+        @include a (tablet-xl){
+            order: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__items {
+        display: flex;
+
+    }
+
+    &__item {
+        margin-right: 55px;
+        &-link {
+            font-size: toRem(15);
+            font-weight: 600;
+            color: $dark-color;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__phone-link {
+        font-size: toRem(15);
+        font-weight: 600;
+        color: $dark-color;
+        padding-left: 30px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            background: url(./../img/phone-icon.png) no-repeat;
+            width: 23px;
+            height: 23px;
+            left: 0;
+        }
+    }
+}
